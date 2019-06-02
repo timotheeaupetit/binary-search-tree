@@ -4,17 +4,17 @@ class Node(object):
         self.left = None
         self.right = None
 
-    def addChild(self, node):
-        if (node.value < self.value):
+    def add_child(self, node):
+        if node.value < self.value:
             if self.left is None:
                 self.left = node
             else:
-                self.left.addChild(node)
-        elif (node.value > self.value):
+                self.left.add_child(node)
+        elif node.value > self.value:
             if self.right is None:
                 self.right = node
             else:
-                self.right.addChild(node)
+                self.right.add_child(node)
 
     def search(self, value):
         if self.value == value:

@@ -1,15 +1,16 @@
 from node import Node
 
+
 class Tree(object):
     def __init__(self):
         self.root = None
 
-    def addValue(self, value):
+    def add_value(self, value):
         node = Node(value)
         if self.root is None:
             self.root = node
         else:
-            self.root.addChild(node)
+            self.root.add_child(node)
 
     def search(self, value):
         self.root.search(value)
